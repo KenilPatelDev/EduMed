@@ -38,7 +38,7 @@ public class MeasureActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        analyzer  = new OutputAnalyzer(this, findViewById(R.id.graphTextureView));
+        analyzer  = new OutputAnalyzer(MeasureActivity.this, findViewById(R.id.graphTextureView));
 
         TextureView cameraTextureView = findViewById(R.id.textureView2);
 
@@ -57,7 +57,7 @@ public class MeasureActivity extends AppCompatActivity {
         super.onPause();
         cameraService.stop();
         if (analyzer != null ) analyzer.stop();
-        analyzer  = new OutputAnalyzer(this, findViewById(R.id.graphTextureView));
+        analyzer  = new OutputAnalyzer(MeasureActivity.this, findViewById(R.id.graphTextureView));
     }
 
 
