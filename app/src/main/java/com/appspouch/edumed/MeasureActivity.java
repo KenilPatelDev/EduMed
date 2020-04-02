@@ -14,7 +14,7 @@ import androidx.core.app.ActivityCompat;
 import android.view.TextureView;
 import android.view.Surface;
 
-public class MeasureActivity extends AppCompatActivity {
+public class MeasureActivity extends StartActivity {
 
 
     private final CameraService cameraService = new CameraService(this);
@@ -26,7 +26,7 @@ public class MeasureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.measure_activity);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        
 
         int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 1;
         ActivityCompat.requestPermissions(this,

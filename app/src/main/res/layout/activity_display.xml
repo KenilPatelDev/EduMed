@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C8E6C9">
+    android:background="@drawable/activity_display_background">
 
 <RelativeLayout
     android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         android:layout_gravity="center_vertical"
         android:gravity="center"
         android:textSize="20sp"
-        android:textColor="#006064"
+        android:textColor="@color/discripitionlist"
         android:layout_marginTop="15dp"
         android:layout_margin="5dp"
         android:fontFamily="@font/raleway_bold" />
@@ -30,13 +30,12 @@
         android:layout_below="@+id/facts"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:cardElevation="3dp"
-        app:cardBackgroundColor="#F1F8E9"
+        app:cardBackgroundColor="@color/discripitioncard_back"
         android:layout_margin="5dp">
 
         <TextView
             android:id="@+id/facts_detail"
-
-            android:textColor="#000"
+            android:textColor="@color/discripition"
             android:textSize="18sp"
             android:layout_width="match_parent"
             android:layout_margin="10dp"
@@ -55,7 +54,7 @@
         android:gravity="center"
         android:layout_gravity="center_vertical"
         android:textSize="20sp"
-        android:textColor="#006064"
+        android:textColor="@color/discripitionlist"
         android:layout_below="@+id/facts_card"
         android:layout_margin="5dp"
         android:fontFamily="@font/raleway_bold" />
@@ -66,14 +65,14 @@
             android:id="@+id/cause_card"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             app:cardElevation="3dp"
-            app:cardBackgroundColor="#F1F8E9"
+            app:cardBackgroundColor="@color/discripitioncard_back"
             android:layout_below="@+id/cause"
             android:layout_margin="5dp">
 
 
             <TextView
                 android:id="@+id/cause_detail"
-                android:textColor="#000"
+                android:textColor="@color/discripition"
                 android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_margin="10dp"
@@ -90,7 +89,7 @@
         android:gravity="center"
         android:layout_gravity="center_vertical"
         android:textSize="20sp"
-        android:textColor="#006064"
+        android:textColor="@color/discripitionlist"
         android:layout_below="@+id/cause_card"
         android:layout_margin="5dp"
         android:fontFamily="@font/raleway_bold" />
@@ -101,16 +100,13 @@
             android:id="@+id/symptoms_card"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             app:cardElevation="3dp"
-            app:cardBackgroundColor="#F1F8E9"
+            app:cardBackgroundColor="@color/discripitioncard_back"
             android:layout_below="@+id/symptoms"
             android:layout_margin="5dp">
 
-
-
-
             <TextView
                 android:id="@+id/symptoms_detail"
-                android:textColor="#000"
+                android:textColor="@color/discripition"
                 android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_margin="10dp"
@@ -129,7 +125,7 @@
         android:layout_marginBottom="5dp"
         android:layout_gravity="center_vertical"
         android:textSize="20sp"
-        android:textColor="#006064"
+        android:textColor="@color/discripitionlist"
         android:layout_below="@id/symptoms_card"
         android:layout_margin="5dp"
         android:fontFamily="@font/raleway_bold" />
@@ -140,7 +136,7 @@
             android:id="@+id/treatment_card"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             app:cardElevation="3dp"
-            app:cardBackgroundColor="#F1F8E9"
+            app:cardBackgroundColor="@color/discripitioncard_back"
             android:layout_below="@+id/treatment"
             android:layout_margin="5dp">
 
@@ -148,7 +144,7 @@
 
                 <TextView
                     android:id="@+id/treatment_detail"
-                    android:textColor="#000"
+                    android:textColor="@color/discripition"
                     android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:layout_margin="10dp"

@@ -111,59 +111,6 @@ class OutputAnalyzer {
 
             @Override
             public void onFinish() {
-              /*  CopyOnWriteArrayList<Measurement<Float>> stdValues = store.getStdValues();
-
-                // clip the interval to the first till the last one - on this interval, there were detectedValleys - 1 periods
-                String currentValue = String.format(
-                        Locale.getDefault(),
-                        activity.getResources().getQuantityString(R.plurals.measurement_output_template, detectedValleys - 1),
-                        60f * (detectedValleys - 1) / (Math.max(1, (valleys.get(valleys.size() - 1) - valleys.get(0)) / 1000f)),
-                        detectedValleys - 1,
-                        1f * (valleys.get(valleys.size() - 1) - valleys.get(0)) / 1000f);
-
-                ((TextView) activity.findViewById(R.id.textView)).setText(currentValue);
-
-               StringBuilder returnValueSb = new StringBuilder();
-                returnValueSb.append(currentValue);
-                returnValueSb.append(activity.getString(R.string.row_separator));
-
-                // look for "drops" of 0.15 - 0.75 in the value
-                // a drop may take 2-3 ticks.
-                // int dropCount = 0;
-                // for (int stdValueIdx = 4; stdValueIdx < stdValues.size(); stdValueIdx++) {
-                //     if (((stdValues.get(stdValueIdx - 2).measurement - stdValues.get(stdValueIdx).measurement) > dropHeight) &&
-                //             !((stdValues.get(stdValueIdx - 3).measurement - stdValues.get(stdValueIdx - 1).measurement) > dropHeight) &&
-                //            !((stdValues.get(stdValueIdx - 4).measurement - stdValues.get(stdValueIdx - 2).measurement) > dropHeight)
-                //    ) {
-                //        dropCount++;
-                //    }
-                // }
-
-                // returnValueSb.append(activity.getString(R.string.detected_pulse));
-                // returnValueSb.append(activity.getString(R.string.separator));
-                // returnValueSb.append((float) dropCount / ((float) (measurementLength - clipLength) / 1000f / 60f));
-                // returnValueSb.append(activity.getString(R.string.row_separator));
-
-                returnValueSb.append(activity.getString(R.string.raw_values));
-                returnValueSb.append(activity.getString(R.string.row_separator));
-
-
-                for (int stdValueIdx = 0; stdValueIdx < stdValues.size(); stdValueIdx++) {
-                    // stdValues.forEach((value) -> { // would require API level 24 instead of 21.
-                    Measurement<Float> value = stdValues.get(stdValueIdx);
-                    returnValueSb.append(value.timestamp.getTime());
-                    returnValueSb.append(activity.getString(R.string.separator));
-                    returnValueSb.append(value.measurement);
-                    returnValueSb.append(activity.getString(R.string.row_separator));
-                }
-
-                // add detected valleys location
-                for (long tick : valleys) {
-                    returnValueSb.append(tick);
-                    returnValueSb.append(activity.getString(R.string.row_separator));
-                }
-
-                ((EditText) activity.findViewById(R.id.editText)).setText(returnValueSb.toString());*/
 
                 cameraService.stop();
             }
