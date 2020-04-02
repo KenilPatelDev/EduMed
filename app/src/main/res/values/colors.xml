@@ -3,7 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#000000</color>
-    <color name="discripitionlist">#006064</color>
-    <color name="discripition">#000</color>
-    <color name="discripitioncard_back">#F1F8E9</color>
+    <color name="descriptionlist">#006064</color>
+    <color name="description">#000</color>
+    <color name="descriptioncard_back">#F1F8E9</color>
 </resources>
