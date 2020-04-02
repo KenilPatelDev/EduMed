@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
         <activity android:name=".SplashScreen"
             android:theme="@style/SplashScreen">
             <intent-filter>
@@ -34,7 +35,9 @@
             android:theme="@style/AppTheme"></activity>
 
         <activity android:name=".MeasureActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+        </activity>
 
 
     </application>
