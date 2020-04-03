@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         else{
-            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "No Internet Connection\nPlease check your Connection", Toast.LENGTH_LONG).show();
         }
     }
 
