@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.LayoutInflater;
@@ -44,11 +47,31 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-
+        checkConnection();
         loadData();
 
 
     }
+
+    public void checkConnection(){
+        ConnectivityManager manager = (ConnectivityManager) getApplicationContext(). getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        assert manager != null;
+        NetworkInfo activeNetwork = manager.getActiveNetworkInfo();
+
+        if (null!=activeNetwork ){
+            if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI){
+                Toast.makeText(this, "Internet Connected", Toast.LENGTH_SHORT).show();
+            }
+            else if (activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE){
+                Toast.makeText(this, "Internet Connected", Toast.LENGTH_SHORT).show();
+            }
+        }
+        else{
+            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_LONG).show();
+        }
+    }
+
 
     private void loadData()
     {
@@ -70,8 +93,9 @@ public class MainActivity extends AppCompatActivity {
                         intent.putExtra("symptomsDetails",model.getDiseaseSymptoms());
                         intent.putExtra("treatmentDetails",model.getDiseaseTreatment());
                         startActivity(intent);
-                        //Toast.makeText(MainActivity.this, ""+model.getdiseaseName(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, ""+model.getdiseaseName(), Toast.LENGTH_SHORT).show();
                     }
+
                 });
             }
 

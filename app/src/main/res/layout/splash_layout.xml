@@ -14,4 +14,17 @@
         android:id="@+id/splashlogo"
         android:layout_centerInParent="true" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright"
+        android:textSize="16sp"
+        android:textColor="#3F51B5"
+        android:layout_alignParentBottom="true"
+        android:textAlignment="center"
+        android:fontFamily="@font/raleway_bold"
+        android:textStyle="italic"
+
+        />
+
 </RelativeLayout>
